@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ECF0F1">
+
+    <!-- Üst Başlık -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2C3E50"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🏋️ Üye Yönetim Paneli"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtToplamUye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toplam Üye: 0"
+            android:textColor="#BDC3C7"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <!-- Kayıt Formu -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Form Kartı -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📝 Yeni Üye Kaydı"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Ad -->
+                <EditText
+                    android:id="@+id/edtAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="Ad"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Soyad -->
+                <EditText
+                    android:id="@+id/edtSoyad"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="Soyad"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Telefon -->
+                <EditText
+                    android:id="@+id/edtTelefon"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="Telefon"
+                    android:inputType="phone"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- E-posta -->
+                <EditText
+                    android:id="@+id/edtEposta"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:hint="E-posta"
+                    android:inputType="textEmailAddress"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Üyelik Tipi -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Üyelik Tipi:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C3E50"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp" />
+
+                <Spinner
+                    android:id="@+id/spnUyelikTipi"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:background="@drawable/edittext_background"
+                    android:padding="8dp"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Butonlar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnKaydet"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:text="💾 KAYDET"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#27AE60"
+                        android:layout_marginEnd="4dp" />
+
+                    <Button
+                        android:id="@+id/btnTemizle"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:text="🔄 TEMİZLE"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:backgroundTint="#7F8C8D"
+                        android:layout_marginStart="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Üye Listesi Başlığı -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 Kayıtlı Üyeler"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2C3E50"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detay için tıklayın, silmek için uzun basın"
+                android:textSize="12sp"
+                android:textColor="#7F8C8D"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Üye Listesi -->
+            <ListView
+                android:id="@+id/lstUyeler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#BDC3C7"
+                android:dividerHeight="1dp"
+                android:background="@drawable/card_background"
+                android:padding="4dp"
+                android:nestedScrollingEnabled="true" />
+
+            <!-- Çıkış Butonu -->
+            <Button
+                android:id="@+id/btnCikis"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="🚪 ÇIKIŞ"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#C0392B"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
